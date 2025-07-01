@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Form</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    img {
+      width: 256px;
+      height: 256px;
+    }
+
+    form {
+      margin: 4px;
+    }
+
+    input, button {
+      margin: 4px;
+      padding: 8px;
+      width: 200px;
+    }
+
+    @media (max-width: 500px) {
+      img {
+        width: 180px;
+        height: 180px;
+      }
+
+      input, button {
+        width: 150px;
+        font-size: 14px;
+      }
+
+      body {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="cake.jpg" alt="cake_img">
+    <form action="">
+      <p>Form</p>
+      <input type="text" aria-label="UserName" placeholder="Username"> <br>
+      <input type="text" aria-label="UserAddress" placeholder="Useraddress"> <br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
