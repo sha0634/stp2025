@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; justify-content: center; margin: 4px;">
+    <ul id="fruit-list">
+        <p>List</p>
+
+    </ul>
+    <script>
+        fruits=["Apple","Banana","Grapes","Orange"]
+        renderList=()=>{fl=document.getElementById("fruit-list");
+        fl.innerHTML="<p>List</p>"
+        fruits.forEach((element,index) => {
+            li=document.createElement("li");
+            li.innerHTML=`${element} <button onclick="deleteFruit(${index})">Delete</button>`;
+            fl.appendChild(li)
+            
+        });}
+        renderList()
+        function deleteFruit(e) {
+            fruits=fruits.filter((v,ind)=>(ind!=e))
+            renderList()
+        }
+        
+    </script>
+</body>
+</html>
