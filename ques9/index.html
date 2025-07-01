@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Navigation Example</title>
+</head>
+<body>
+  <h2>DOM Example</h2>
+
+  <div id="container">
+    <p>First paragraph</p>
+    <p id="second">Second paragraph</p>
+    <span>Extra content</span>
+  </div>
+
+  <script>
+    const secondPara = document.getElementById("second");
+    console.log(secondPara.parentNode);
+    const container = document.getElementById("container");
+    console.log(container.childNodes);
+    console.log(secondPara.nextSibling);
+    console.log(secondPara.nextElementSibling);
+  </script>
+</body>
+</html>
