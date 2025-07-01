@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message">this div has id message and the text has not been changed</div>
+    <button onclick="changeText()">changeText</button>
+    <script>
+        function changeText() {
+            document.getElementById("message").innerHTML="button clicked and text changed"    
+            alert("text changed successfully")        
+        }
+    </script>
+</body>
+</html>
